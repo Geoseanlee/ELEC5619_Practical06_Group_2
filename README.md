@@ -8,7 +8,7 @@ The project aims to provide businesses with comprehensive inventory and order ma
 This project's goal is to build a centralized, real-time inventory and order management system. It will enable companies to efficiently manage inventory levels across multiple warehouses, quickly place orders with suppliers, and ensure rapid and accurate fulfillment of customer orders. Through this system, companies can reduce out-of-stock risks, optimize inventory costs, and enhance customer satisfaction.
 
 ## 3. Tech Stack
-- Frontend: React + Tailwind CSS
+- Frontend: Next.js + React.js + Tailwind CSS
 - Backend: Spring Boot (Java)
 - Database: MySQL
 - Version Control: GitHub
