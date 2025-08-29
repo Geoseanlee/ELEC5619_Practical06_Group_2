@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: InvenSys API
+  
+  # MySQL datasource configuration with environment variables
+  datasource:
+    url: jdbc:mysql://localhost:3306/inventory?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8&createDatabaseIfNotExist=true&allowLoadLocalInfile=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  # JPA / Hibernate settings
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    # Optional explicit dialect (Hibernate 6 auto-detects, keep if needed)
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+# Server Configuration
+server:
+  port: 8080
+
+# Actuator health details for DB connectivity check
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health
